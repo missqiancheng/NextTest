@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*头部样式*/ 
+.hover-wrapper:hover+.affected-item{  
+    color: yellow;  
+}  
+.navbar {  
+  color: black; 
+  background-color: white;
+  padding: 10px 40px 10px 0px;  
+  position: -webkit-sticky; 
+  position: sticky;   
+  top: 0; 
+  z-index: 1000;  
+  display: flex; 
+  width: 100%; 
+}  
+  
+.navbar nav ul {  
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+}  
+  
+  
+.navbar nav ul li a {  
+  color: black; 
+  text-decoration: none;   
+  padding: 10px 10px 10px 0px; 
+  display: block;   
+  min-width: 75px;
+}  
+    
+  /* 自定义下拉框样式 */  
+.custom-select {
+  border: none; 
+  outline:none;
+  text-align: center;
+}  
+
+.custom-select option{  
+  background-color: #020202; 
+  color: white;
+}  
+
+
+/*内容样式*/ 
+.card-line {  
+    @apply grid gap-8 sm:grid-cols-2 lg:grid-cols-4
+}
+.card-item{
+    @apply basis-1/4; 
+    position: relative;
+}
+.card-imgage{
+    @apply rounded-lg cursor-pointer;
+}
+.card-imgage:hover+.card-hoversvg{
+    visibility:visible;
+}
+.card-hoversvg:hover{
+    visibility:visible;
+}
+.card-hoversvg{
+    @apply cursor-pointer;
+    width:24px;
+    height: 24px;
+    position: absolute;  
+    top: 65%;  
+    left: 5%;  
+    height: auto;  
+    visibility:hidden;
+}
+
+.card-title-box{
+    @apply flex flex-row;
+    padding-top: 10px
+}
+
+.card-title-likesNumber{
+    @apply basis-1/2 text-right text-xs;
+    color:gray;
+    line-height: 50px;
+    
+}
+.card-title-username{
+    @apply text-xs;
+    color:gray;
+}
+.load_more_pagination_button {
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    margin: 36px;
+}
+
+/*脚样式*/
+.footer-detaild {  
+    @apply no-underline hover:underline
+}
+
+.footer-detaild-grad {  
+    @apply basis-1/4 text-sm leading-8
+}
+.footer-detaild-title {  
+    @apply font-black
+}
+
